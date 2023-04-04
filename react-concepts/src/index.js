@@ -8,7 +8,7 @@ import UserDetails from './components/topic/forms/UserDetails';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     <UserDetails/>
   </React.StrictMode>
 );
