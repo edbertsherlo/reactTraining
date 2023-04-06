@@ -1,11 +1,9 @@
 import React,{useState} from "react";
 import ProductCard from "./productCard";
-import productData from "../../../../../dataCenter/products.json";
 
-function ProductList({pageHandler}){
 
-  const [productList,setProductList] = useState(productData);
-  
+function ProductList({pageHandler,productList}){
+
   return (
         
   <div className="container my-5">
@@ -16,7 +14,10 @@ function ProductList({pageHandler}){
     <div className="row">
       {
         productList.map(product => {
-          return(<ProductCard product = {product} key={product.id} pageHandler={pageHandler}/>)
+          if(product.active){
+            return(<ProductCard product = {product} key={product.id} pageHandler={pageHandler}/>)
+          }
+          
           
         })
       }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import './productCard.css';
 function ProductCard({product,pageHandler})
 {
     const showDetailView = (e,productId) => {
