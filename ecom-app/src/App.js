@@ -13,25 +13,31 @@ function App() {
   const [productList,setProductList] = useState(productData);
   const [activePage,setActivePage] = useState('home');
   const [productId,setproductId] = useState(0);
+  const [cartinfo,setCartinfo] = useState([]);
 
   const pageHandler = (pageName,productId='') =>{
-    console.log('pageName -'+pageName);
-    console.log('productId -'+productId);
     setActivePage(pageName);
     setproductId(productId);
+  }
+  const cartHandler = (productObj) =>{
+    
+    // let copyObj = [...cartinfo];
+    // copyObj.push(productObj);
+    setCartinfo([...cartinfo,productObj]);
+    console.log(cartinfo);
   }
   let Page;
   if (activePage=='home') 
   {
-    Page = <Home pageHandler = {pageHandler} productList={productList}/>
+    Page = <Home pageHandler = {pageHandler} productList={productList} cartHandler={cartHandler}/>
   } else if(activePage=='detail') {
 
     let productInfo = productList[productId-1];
-    Page = <Detail pageHandler = {pageHandler} productInfo={productInfo}/>
+    Page = <Detail pageHandler = {pageHandler} productInfo={productInfo} cartHandler={cartHandler}/>
   }
   return (
     <div className="App">
-      <Header/>
+      <Header cartCount={cartinfo}/>
       {Page}
       <Footer/>
     </div>

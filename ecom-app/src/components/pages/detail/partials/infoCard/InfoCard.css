@@ -1,3 +1,7 @@
 .c-buton{
     margin-right: 5px;
 }
+
+.outofstock{
+    color: red !important;
+}

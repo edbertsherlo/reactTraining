@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import ProductCard from "./productCard";
 
 
-function ProductList({pageHandler,productList}){
+function ProductList({pageHandler,productList,cartHandler}){
 
   return (
         
@@ -15,7 +15,7 @@ function ProductList({pageHandler,productList}){
       {
         productList.map(product => {
           if(product.active){
-            return(<ProductCard product = {product} key={product.id} pageHandler={pageHandler}/>)
+            return(<ProductCard product = {product} key={product.id} pageHandler={pageHandler} cartHandler={cartHandler}/>)
           }
           
           

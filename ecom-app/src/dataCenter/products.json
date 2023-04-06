@@ -6,7 +6,7 @@
     "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/1.webp",
     "price": 790,
     "active": true,
-    "atp":10,
+    "atp":0,
     "rating":4,
     "features":{
         "f1":"Some great feature name here",
@@ -17,13 +17,13 @@
     }
   },
   {
-    "id": 2,
+    "id": 2, 
     "name": "Canon camera 20x zoom, Black color EOS 2000",
     "description": "Curabitur sit amet vulputate tortor. Nulla in tortor at augue efficitur pretium. Sed ullamcorper tincidunt dolor, id scelerisque purus accumsan at. Nulla et urna sed",
     "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/2.webp",
     "price": 2300,
     "active": true,
-    "atp":4,
+    "atp":7,
     "rating":5,
     "features":{
         "f1":"Some great feature name here",

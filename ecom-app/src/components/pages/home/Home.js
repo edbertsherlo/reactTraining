@@ -5,11 +5,11 @@ const productSectionStyle = {
     backgroundColor: '#f5f5f5'
  }
 
-function Home({pageHandler,productList}){
+function Home({pageHandler,productList,cartHandler}){
     return(
         <>
             <section className="mt-5" style={productSectionStyle}>
-                <ProductList pageHandler={pageHandler} productList={productList}/>
+                <ProductList pageHandler={pageHandler} productList={productList} cartHandler={cartHandler}/>
             </section>
         </>
     );

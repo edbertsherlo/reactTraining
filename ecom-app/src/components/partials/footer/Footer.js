@@ -11,7 +11,7 @@ function Footer(){
         
         <div className="col-12 col-lg-3 col-sm-12 mb-2">
           
-          <a href="https://mdbootstrap.com/" target="_blank" className="">
+          <a href="#"  className="">
             <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
           </a>
           <p className="mt-2 text-dark">

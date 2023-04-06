@@ -2,7 +2,12 @@ import React  from "react";
 import './Header.css';
 
 
-function Header() {
+function Header({cartCount}) {
+
+  let cartElement;
+  if(cartCount>0){
+    cartElement = (<div><div class="counter" data-qa="btn_wishlistLink_count">{cartCount}</div></div>);
+  }
   return (
     <header>
       <div className="p-3 text-center bg-white border-bottom">
@@ -10,8 +15,8 @@ function Header() {
           <div className="row gy-3">
             <div className="col-lg-2 col-sm-4 col-4">
               <a
-                href="https://mdbootstrap.com/"
-                target="_blank"
+                href="#"
+                
                 className="float-start"
               >
                 <img
@@ -50,6 +55,10 @@ function Header() {
                   <i className="fas fa-shopping-cart m-1 me-md-2"></i>
                   <p className="d-none d-md-block mb-0">My cart</p>{" "}
                 </a>
+                {
+                  cartElement
+                }
+                
               </div>
             </div>
 
