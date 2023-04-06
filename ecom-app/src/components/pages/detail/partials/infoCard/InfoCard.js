@@ -33,10 +33,7 @@ function InfoCard({productInfo}){
         </div>
        );
     }
-    let rating;
-    for(let i=0;i<=5;i++){
-      rating= <Rating/>
-    }
+    
     
     return(
         <main className="col-lg-6" style={imageCardWrapperStyle}>
@@ -46,9 +43,8 @@ function InfoCard({productInfo}){
           </h4>
           <div className="d-flex flex-row my-3">
             <div className="text-warning mb-1 me-2">
-              {
-                rating
-              }
+              
+              <Rating/>
               
               <span className="ms-1">
                 4.5

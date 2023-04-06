@@ -20,10 +20,9 @@ function App() {
     setproductId(productId);
   }
   const cartHandler = (productObj) =>{
-    
-    // let copyObj = [...cartinfo];
-    // copyObj.push(productObj);
-    setCartinfo([...cartinfo,productObj]);
+    let copyObj = cartinfo;
+    copyObj.push(productObj);
+    setCartinfo(copyObj);
     console.log(cartinfo);
   }
   let Page;
@@ -33,6 +32,7 @@ function App() {
   } else if(activePage=='detail') {
 
     let productInfo = productList[productId-1];
+    
     Page = <Detail pageHandler = {pageHandler} productInfo={productInfo} cartHandler={cartHandler}/>
   }
   return (

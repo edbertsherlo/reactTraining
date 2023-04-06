@@ -4,6 +4,7 @@ import './Header.css';
 
 function Header({cartCount}) {
 
+		
   let cartElement;
   if(cartCount>0){
     cartElement = (<div><div class="counter" data-qa="btn_wishlistLink_count">{cartCount}</div></div>);
@@ -57,6 +58,7 @@ function Header({cartCount}) {
                   <p className="d-none d-md-block mb-0">My cart</p>{" "}
                 </a>
                 {
+
                   cartElement
                 }
                 
