@@ -12,7 +12,8 @@ function Footer(){
         <div className="col-12 col-lg-3 col-sm-12 mb-2">
           
           <a href="#"  className="">
-            <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
+            {/* <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" /> */}
+            <img src={process.env.PUBLIC_URL + '/web/images/ecom.jpg'} height="35" />
           </a>
           <p className="mt-2 text-dark">
             © 2023 Copyright: MDBootstrap.com

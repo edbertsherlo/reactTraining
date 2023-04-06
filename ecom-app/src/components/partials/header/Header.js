@@ -19,8 +19,9 @@ function Header({cartCount}) {
                 
                 className="float-start"
               >
+                
                 <img
-                  src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
+                  src={process.env.PUBLIC_URL + '/web/images/ecom.jpg'}
                   height="35"
                 />
               </a>
