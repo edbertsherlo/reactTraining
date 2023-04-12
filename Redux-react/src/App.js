@@ -10,7 +10,11 @@ import { useSelector } from "react-redux";
 
 function App() {
   const count = useSelector((state) => state.counter.value);
-
+  const cartInfo = useSelector((state) => state.cartInfo.value);
+  const cartCount = cartInfo.length;
+  const cartContent = JSON.stringify(cartInfo);
+  console.log(cartInfo);
+  console.log(cartInfo.length);
   const [apiData, setApiData] = useState([]);
 
   // apiData = "demo";
@@ -34,6 +38,8 @@ function App() {
     <div>
       <h1>Parent Component</h1>
       <div>Count value on Parent Comp:{count}</div>
+      <div>Cart count:{cartCount}</div>
+      <div>Cart contnet:{cartContent}</div>
 
       {/* <h1> Fetch Example</h1> */}
       {/* {apiData.map((data) => {
